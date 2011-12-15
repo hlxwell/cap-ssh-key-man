@@ -8,7 +8,7 @@ Capistrano::Configuration.instance(true).load do
 
       puts "Deploying authorized_keys ..."
       tmp_authorized_keys_path = File.join(".", "tmp", "authorized_keys")
-      put File.read(tmp_authorized_keys_path), File.join("/home/#{user}", "authorized_keys")
+      put File.read(tmp_authorized_keys_path), File.join("/home/#{user}", ".ssh", "authorized_keys")
 
       # delete temp file after use it.
       FileUtils.rm tmp_authorized_keys_path
