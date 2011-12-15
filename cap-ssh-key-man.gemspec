@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{cap-ssh-key-man}
-  s.version = ""
+  s.version = "1.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Michael He"]
@@ -19,11 +19,11 @@ Gem::Specification.new do |s|
     "Gemfile",
     "README",
     "Rakefile",
+    "VERSION",
     "cap-ssh-key-man.gemspec",
     "lib/cap-ssh-key-man.rb",
     "lib/cap-ssh-key-man/public_key_combiner.rb",
-    "lib/cap-ssh-key-man/tasks/sync.rb",
-    "lib/cap-ssh-key-man/version.rb"
+    "lib/cap-ssh-key-man/tasks/sync.rb"
   ]
   s.homepage = %q{http://github.com/hlxwell/cap-ssh-key-man}
   s.licenses = ["MIT"]
