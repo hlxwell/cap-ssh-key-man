@@ -10,7 +10,7 @@ Usage
 
 1. Add `gem "cap-ssh-key-man"` in your Gemfile.
 
-2. Add `require 'cap-ssh-key-man/tasks/sync'` to `config/deploy.rb` of your rails project.
+2. Add `require 'cap-ssh-key-man'` to `config/deploy.rb` of your rails project.
 
 3. Put all public ssh keys to `config/developer_ssh_keys` dir of your rails project.
 
