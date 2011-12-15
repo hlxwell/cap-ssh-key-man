@@ -3,15 +3,9 @@ Capistrano::Configuration.instance(true).load do
   namespace :sshkey do
     desc "Sync keys to servers"
     task :deploy do
-      puts "Creating authorized_keys file ..."
       CapSshKeyMan::PublicKeyCombiner.combine_developer_public_keys
-
-      puts "Deploying authorized_keys ..."
-      tmp_authorized_keys_path = File.join(".", "tmp", "authorized_keys")
-      put File.read(tmp_authorized_keys_path), File.join("/home/#{user}", ".ssh", "authorized_keys")
-
-      # delete temp file after use it.
-      FileUtils.rm tmp_authorized_keys_path
+      put File.read(CapSshKeyMan::PublicKeyCombiner::AUTHORIZED_KEYS_PATH), File.join("/home/#{user}", ".ssh", "authorized_keys")
+      FileUtils.rm CapSshKeyMan::PublicKeyCombiner::AUTHORIZED_KEYS_PATH # delete temp file after use it.
     end
   end
 end
