@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{cap-ssh-key-man}
-  s.version = "1.2.0"
+  s.version = "1.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Michael He"]
@@ -13,11 +13,11 @@ Gem::Specification.new do |s|
   s.description = %q{This tool is used to mass deploy ssh-keys to all your servers according to the capistrano config.}
   s.email = %q{hlxwell@gmail.com}
   s.extra_rdoc_files = [
-    "README"
+    "README.md"
   ]
   s.files = [
     "Gemfile",
-    "README",
+    "README.md",
     "Rakefile",
     "VERSION",
     "cap-ssh-key-man.gemspec",
