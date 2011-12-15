@@ -1,8 +1,8 @@
 require "cap-ssh-key-man/public_key_combiner"
 Capistrano::Configuration.instance(true).load do
-  namespace :cap_ssh_key_man do
+  namespace :sshkey do
     desc "Sync keys to servers"
-    task :sync do
+    task :deploy do
       puts "Creating authorized_keys file ..."
       CapSshKeyMan::PublicKeyCombiner.combine_developer_public_keys
 
