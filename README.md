@@ -12,9 +12,9 @@ Usage
 
 2. Add `require 'cap-ssh-key-man/tasks/rsync'` to `config/deploy.rb` of your rails project.
 
-3. Put all public ssh keys to `config/developer_ssh_keys` dir of your rails project.
+3. Add `set :sshkeys_path, PATH_TO_SSHKEYS_STORE_PATH` to `deploy.rb`.
 
-4. Add `set :sshkeys_path, PATH_TO_SSHKEYS_STORE_PATH` to `deploy.rb`.
+4. Put all public ssh keys to `PATH_TO_SSHKEYS_STORE_PATH` dir of your rails project.
 
 5. Execute `cap sshkey:deploy`
 
